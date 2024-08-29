@@ -1,2 +1,2 @@
 # psc
-Atividades e Trabalhos pcs
+Atividades e Trabalhos Currícular "Programação de Soluções"(PCS)
