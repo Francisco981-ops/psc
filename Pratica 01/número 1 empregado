@@ -1,0 +1,10 @@
+Import javax.swing.JOptionPane;
+public class MediaAritmeticaJOptionPane {
+    public static void main(String[] args) {
+        double nota1 = double.parseDouble(MediaAritmeticaJOptionPane.("Digite a primeira nota: "));
+        double nota2 = double.parseDouble(MediaAritmeticaJOptionPane.("Digite a segunda nota: "));
+        double nota3 = double.parseDouble(MediaAritmeticaJOptionPane.("Digite a terceira nota: "));
+        double media = (nota1 + nota2 + nota3)/3;
+        MediaAritmeticaJOptionPane.(null, "A média aritmética é: " + media);
+    }
+} 
