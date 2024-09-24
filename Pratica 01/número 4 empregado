@@ -1,0 +1,10 @@
+import javax.swing.JOptionPane;
+
+public class AumentoSalarialJOptionPane {
+    public static void main(String[] args) {
+        double salarioAtual = Double.parseDouble(JOptionPane.showInputDialog("Digite o salário atual:"));
+
+        double novoSalario = salarioAtual * 1.25;
+        JOptionPane.showMessageDialog(null, "O novo salário é: " + novoSalario);
+    }
+}
