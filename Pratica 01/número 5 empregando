@@ -1,0 +1,11 @@
+import javax.swing.JOptionPane;
+
+public class AreaLosangoJOptionPane {
+    public static void main(String[] args) {
+        double diagonalMaior = Double.parseDouble(JOptionPane.showInputDialog("Digite a diagonal maior do losango:"));
+        double diagonalMenor = Double.parseDouble(JOptionPane.showInputDialog("Digite a diagonal menor do losango:"));
+
+        double area = (diagonalMaior * diagonalMenor) / 2;
+        JOptionPane.showMessageDialog(null, "A área do losango é: " + area);
+    }
+}
