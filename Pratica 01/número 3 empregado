@@ -1,0 +1,11 @@
+import javax.swing.JOptionPane;
+
+public class ConversaoDolarJOptionPane {
+    public static void main(String[] args) {
+        double cotacaoDolar = Double.parseDouble(JOptionPane.showInputDialog("Digite a cotação do dólar:"));
+        double valorDolar = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor em dólares:"));
+
+        double valorReais = valorDolar * cotacaoDolar;
+        JOptionPane.showMessageDialog(null, "O valor em reais é: " + valorReais);
+    }
+}
