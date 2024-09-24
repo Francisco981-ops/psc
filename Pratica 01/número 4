@@ -1,0 +1,10 @@
+import java.util.*
+public class AumentoSalarial {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Digite o salário atual:  ");
+        double salarioAtual = input.nextDouble();
+        double novoSalario = salarioAtual * 1.25;
+        System.out.println("O novo salário é:  " + novoSalario);
+    }
+}
