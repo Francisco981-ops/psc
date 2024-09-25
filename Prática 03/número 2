@@ -1,0 +1,23 @@
+import java.util.*
+public class matriculaENotas {
+    public static void matriculaENotas(Scanner input) {
+        while(true) {
+            System.out.print("Digite a matrícula do aluno (ou uma matrícula negativa para sair): ");
+            int matricula = input.nextInt();
+            if (matricula < 0) break;
+            double somaNotas = 0;
+            for (int i = 1; i <= 3; i++) {
+                System.out.print("Digite a nota " + i + ": ");
+                double nota = input.nextDouble();
+                somaNotas += nota;
+            }
+            double media = somaNotas / 3;
+            if (media >= 70) {
+                System.out.print("Aluno " + matricula + "aprovado.");
+            } else if (media >= 60) {
+                System.out.print("Aluno " + matricula + " em recuperação. ");
+            } else {
+                System.out.print("Aluno " + matricula + " reprovado. ");
+            }
+    }
+}
