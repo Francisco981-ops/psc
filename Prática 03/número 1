@@ -1,0 +1,36 @@
+import java.util.*
+public class notasEFaltas {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int alunosComNotaMaiorIgual90 = 0; 
+        int alunosReprovados = 0;
+        double maiorNota = Double.MIN_VALUE;
+        double menorNota = Double.MIN_VALUE;
+        double somaNotas = 0;
+        int totalAlunos = o;
+
+        while (true) {
+            System.out.print("Digite a nota final do aluno (ou uma nota negativa para sair): ");
+            double nota = scanner.nextDouble();
+            if (nota < 0) break;
+            System.out.print("Digite o total de faltas do aluno: ");
+            int faltas = scanner.nextInt();
+            if (nota >= 90) alunosComNotaMaiorIgual90++;
+            if (nota < 70 || faltas >= 20)alunosReprovados++;
+            maiorNota = Math.max(maiorNota, nota);
+            menorNota = Math.min(menorNota, nota);
+            somaNotas += nota;
+            totalAlunos++;
+        }
+
+        if(totalAlunos > 0) {
+            double mediaNotas = somaNotas / totalAlunos;
+            System.out.print("a) Quantidades de alunos com nota >= 90: " + alunosComNotaMaiorIgual90);
+            System.out.print("b) Quantidades de alunos reprovados por nota ou falta: " + alunosReprovados);
+            System.out.print("c) Maior nota: " + maiorNota);
+            System.out.print("c) Menor nota: " + menorNota);
+            System.out.print("d) Média das notas: " + mediaNotas);
+        } else {
+            System.out.print("Nenhum aluno foi cadastrado.");
+    }
+}
