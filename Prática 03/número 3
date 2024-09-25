@@ -1,0 +1,28 @@
+import java.util.*
+public class pesquisaAudiencia {
+    int[] canais = {2, 4, 5, 7, 12};
+    int[] audiencia = new int[canais.length];
+    int totalPessoas = 0;
+    while (true) {
+        System.out.print("Digite o número do canal (2, 4, 5, 7, 12 ou 0 para sair): ");
+        int canal = scanner.nextInt();
+        if (canal == 0) break;
+        System.out.print("Digite o número de pessoas assistindo: ");
+        int pessoas = scanner.nextInt();
+        totalPessoas += pessoas;
+        for (int i = 0; i < canais.length; i++) {
+            if (canais[i] == canal) {
+                audiencia[i] += pessoas;
+                break;
+            }
+        }
+    }
+    if (totalPessoas > 0) {
+        for (int i = 0; i < canais.length; i++) {
+            double percentual = (audiencia[i] / (double) totalPessoas) * 100;
+            System.out.print("Canal " + canais[i] + ": " + percentual + "% de audiência.");
+        }
+    } else {
+        System.out.print("Nenhum dado de audiência foi registrado.");
+    }
+}
