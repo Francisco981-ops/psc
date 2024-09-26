@@ -1,0 +1,26 @@
+import java.util.*
+public class pesquisaPrefeitura {
+    public static void pesquisaPrefeitura(Scanner scanner) {
+        double somaSalarios = 0;
+        int somaFilhos = 0;
+        int totalPessoas = 0;
+        while (true) {
+            System.out.print("Digite o salário (ou um valor negativo para sair): ");
+            double salario = scanner.nextDouble();
+            if (salario < 0) break;
+            System.out.print("Digite o número de filhos: ");
+            int filhos = scanner.nextInt();
+            somaSalarios += salario;
+            somaFilhos += filhos;
+            totalPessoas++;
+        }
+        if (totalPessoas > 0) {
+            double mediaSalario = somaSalarios / totalPessoas;
+            double mediaFilhos = (double) somaFilhos / totalPessoas;
+            System.out.print("a) Média salarial: " + mediaSalario);
+            System.out.print("b) Média de número de filhos: " + mediaFilhos);
+        } else {
+            System.out.print("Nenhum dado foi registrado.");
+        }
+    }
+}
