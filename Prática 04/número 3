@@ -1,0 +1,26 @@
+import javax.swing.JOptionPane;
+public class ValidacaoDados {
+    public static void main(String[] args) {
+        double nota;
+        do {
+            String entradaNota = JOptionPane.showInputDialog("Informe a nota (entre 0 e 10): ");
+            nota = Double.parseDouble(entradaNota);
+        } while (nota < 0 || nota > 10);
+        double salario;
+        do {
+            String entradaSalario = JOptionPane.showInputDialog("Informe o salário (maior que zero): ");
+            salario = Double.parseDouble(entradaSalario);
+        } while (salario <= 0);
+        String sexo;
+        do {
+            sexo = JOptionPane.showInputDialog("Informe o sexo (m ou f): ");
+        } while (!sexo.equalsIgnoreCase("m") && !sexo.equalsIgnoreCase("f"));
+        int idade;
+        do {
+            String entradaIdade = JOptionPane.showInputDialog("Informe a idade (entre 0 e 120): ");
+            idade = Integer.parseInt(entradaIdade);
+        } while (idade < 0 || idade > 120);
+        JOptionPane.showInputDialog(null, "Dados informados corretamente!\n" + "Nota: " + nota + "\nSalário: " + salario + "\nSexo: " + sexo + "\nIdade: " + idade);
+        System.exit(0);
+    }
+}
