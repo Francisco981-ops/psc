@@ -1,0 +1,29 @@
+import javax.swing.JOptionPane;
+public class ContaCorrente {
+    public static void main(String[] args) {
+        String continuar;
+        do {
+            String numeroConta = JOptionPane.showInputDialog("Informe o número da conta (3 dígitos): ");
+            while (numeroConta.length() != 3) {
+                numeroConta = JOptionPane.showInputDialog("Número de conta inválido! Informe um número de 3 dígitos: ");
+            }  
+            int c = Integer.parseInt(String.valueOf(numeroConta.charAt(0)));
+            int d = Integer.parseInt(String.valueOf(numeroConta.charAt(1)));
+            int u = Integer.parseInt(String.valueOf(numeroConta.charAt(2)));
+            int soma = Integer.parseInt(numeroConta) + numeroInverso;
+            String somaStr = String.valueOf(soma);
+            if (somaStr.length() < 4) {
+                somaStr = "0" + somaStr;
+            }
+            int mult0 = Character.getNumericValue(somaStr.charAt(0)) * 0;
+            int mult1 = Character.getNumericValue(somaStr.charAt(1)) * 1;
+            int mult2 = Character.getNumericValue(somaStr.charAt(2)) * 2;
+            int mult3 = Character.getNumericValue(somaStr.charAt(3)) * 3;
+            int somaFinal = mult0 + mult1 + mult2 + mult3;
+            int digitoVerificador = somaFinal % 10;
+            JOptionPane.showMessageDialog(null, "o dígito verificador da conta " + numeroConta + " é: " + digitoVerificador);
+            continuar = JOptionPane.showInputDialog("Deseja calcular o dígito verificador de outra conta? (S)im ou (N)ão");
+        } while (continuar.equalsIgnoreCase("s") || continuar.equalsIgnoreCase("sim"));
+        System.exit(0);
+    }
+}
