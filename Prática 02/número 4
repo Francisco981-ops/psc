@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class calcularOImcEVerificarASituaçãoDoPeso {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Informe o peso (kg): ");
+        double peso = sc.nextDouble();
+        System.out.println("Informe a altura (m): ");
+        double altura = sc.nextDouble();
+        double imc = peso / (altura * altura);
+        if (imc < 20) {
+            System.out.println("Abaixo do Peso");
+        } else if (imc <= 25) {
+            System.out.println("Peso Normal");
+        } else if (imc <= 30) {
+            System.out.println("Sobrepeso");
+        } else if (imc <= 40) {
+            System.out.println("Obesidade");
+        } else {
+            System.out.println("Obesidade Mórbida");
+    }
+}
