@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class VelocidadeAlturaBolaPlaneta {
+    public static main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Informe a velocidade inicial v0: ");
+        double v0 = sc.nextDouble();
+        System.out.println("Informe o instante t: ");
+        double t = sc.nextDouble();
+        double g = 9.8;
+        double vT = v0 - g * t;
+        double hT = v0 * t - 0.5 * g * t * t;
+        System.out.println("Velocidade no instante t: " + vT);
+        System.out.println("Altura no instate t: " + hT);
+    }
+}
