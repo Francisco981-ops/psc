@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class TotalDiariasHotelTipoQuarto {
+    public static main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Informe o tipo de apartamento (Simples/Duplo): ");
+        String tipoApto = sc.next();
+        System.out.println("Informe o número de diárias: ");
+        int diasHotel = sc.nextInt();
+        double valorDiaria = 0;
+        if (tipoApto.equalsIgnoreCase("Simples")) {
+            if (diasHotel < 10) valorDiaria = 100;
+            else if (diasHotel < 15) valorDiaria = 90;
+            else valorDiaria = 80;
+        } else if (tipoApto.equalsIgnoreCase("Duplo")) {
+            if (diasHotel < 10) valorDiaria = 140;
+            else if (diasHotel <= 15) valorDiaria 120;
+            else valorDiaria = 100;
+        }
+        System.out.println("Total a pagar: R$ " + (valorDiaria * diasHotel));
+    }
+}
