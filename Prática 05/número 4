@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class MediaDeIdade {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int idade, somaIdades = 0, contIdades = 0;
+        while (true) {
+            System.out.println("Informe a idade (ou -1 para sair):");
+            idade = scanner.nextInt();
+            if (idade == -1) break;
+            somaIdades += idade;
+            contIdades++;
+        }
+        if (contIdades > 0) {
+            double mediaIdades = (double) somaIdades / contIdades;
+            System.out.println("Média das idades: " + mediaIdades);
+        }
+    }
+}
