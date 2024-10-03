@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class FatorialDeUmNumero {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Informe um número para calcular o fatorial:");
+        int n = scanner.nextInt();
+        if (n < 0) {
+            System.out.println("Número inválido.");
+        } else {
+            int fatorial = 1;
+            for (int i = 1; i <= n; i++) {
+                fatorial*= i;
+            }
+            System.out.println("Fatorial de " + n + ": " + fatorial)
+        }
+    }
+}
