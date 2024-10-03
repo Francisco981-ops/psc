@@ -4,6 +4,7 @@ public class MaiorMenorNumero10Numero {
         Scanner scanner = new Scanner(System.in);
         maior = Integer.MIN_VALUE;
         menor = Integer.MAX_VALUE;
+        
         for (int i = 1; i <= 10; i++) {
             System.out.println("Informe o número " + i + ":");
             int numero = scanner.nextInt();
