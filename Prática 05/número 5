@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class MaiorMenorNumeroInformados {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int maior = Integer.MiN_VALUE, menor = Integer.MAX_VALUE;
+        while (true) {
+            System.out.println("Informe um número (ou -1 para sair);");
+            int numero = scanner.nextInt();
+            if (numero == -1) break;
+            if (numero > maior) maior = numero;
+            if (numero < menor) menor = numero;
+        }
+        System.out.println("Maior número: " + maior);
+        System.out.println("Menor número: " + menor);
+    }
+}
