@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class SexoEPesoDasPessoas {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        int countHomensPeso = 0, countMulheresPeso = 0;
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Informe o sexo (M/F) e o peso da pessoa " + i + ":");
+            char sexo = scanner.next().toUpperCase().charAt(0);
+            double peso = scanner.nextDouble();
+            if (sexo == 'M' && peso >= 60 && peso <= 80) {
+                countHomensPeso++;
+            } else if (sexo == 'F' && peso >= 50 && peso <= 70) {
+                countMulheresPeso++;
+            }
+        }
+        System.out.println("Homens com peso entre 60 e 80 kg: " + countHomensPeso);
+        System.out.println("Mulheres com peso entre 50 e 70 kg: " + countMulheresPeso);
+    }
+}
+        
