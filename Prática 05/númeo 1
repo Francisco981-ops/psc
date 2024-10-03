@@ -1,0 +1,11 @@
+import java.util.Scanner;
+public class SomaNumerosInteiros {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int soma = 0;
+        for (int i = 7; i <= 20; i++) {
+            soma += i;
+        }
+        System.out.println("Soma dos números entre 7 e 20: " + soma);
+    }
+}
