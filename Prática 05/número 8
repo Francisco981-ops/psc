@@ -1,10 +1,18 @@
 import java.util.Scanner;
+
 public class PotenciaNumeroUsandoMultiplicação {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Informe a base:");
         int base = scanner.nextInt();
 
-        System.out.println(Informe o expoente:)
+        System.out.println("Informe o expoente:");
+        int expoente = scanner.nextInt();
+        int potencia = 1;
+
+        for (int i = 1; i <= expoente; i++) {
+            potencia *= base;
+        }
+        System.out.println(base + " elevado a " + expoente + " = " + potencia);
     }
 }
