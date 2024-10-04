@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Exercicio1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] numeros = new int[10];
+        int somaPares = 0;
+
+        System.out.println("Digite 10 números inteiros:");
+        for (int i = o; i < 10; i++) {
+            numeros[i] = scanner.nextInt();
+            if (numeros[i] % 2 == 0) {
+                somaPares += numeros[1];
+            }
+        }
+
+        System.out.println("Vetor: ");
+        for (int num : numeros) {
+            System.out.print(num + " ");
+        }
+        System.out.println("\nSoma dos números pares: " + somaPares);
+    }
+}
