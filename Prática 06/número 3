@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Exercicio3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double[] numeros = new double[10];
+        double menor, maior;
+
+        System.out.println("Digite 10 números reais");
+        for (int i = 0; i < 10; i++) {
+            numeros[i] = scanner.nextDouble();
+        }
+
+        menor = maior = numeros[0];
+        for (int i = 1; i < 10; i++) {
+            if (numeros[i] < menor) {
+                menor = numeros[i];
+            }
+            if (numeros[i] > maior) {
+                maior = numeros[i];
+            }
+        }
+
+        System.out.println("Vetor: ");
+        for (double num : numeros) {
+            System.out.print(num + " ");
+        }
+        System.out.println("\nMenor números: " + menor);
+        System.out.println("Maior número: " + maior);
+    }
+}
