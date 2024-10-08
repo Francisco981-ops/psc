@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class Vetor4 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         double[] numeros = new double[10];
 
         System.out.println("Digite 10 números reais:");
         for (int i = 0; i < 10; i++) {
-            numeros[i] = scanner.nextDouble();
+            numeros[i] = input.nextInt();
         }
 
         System.out.println("Elementos nas posições pares:");

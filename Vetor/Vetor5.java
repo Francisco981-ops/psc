@@ -2,19 +2,19 @@ import java.util.Scanner;
 
 public class Vetor5 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         int[] vetor1 = new int[10];
         int[] vetor2 = new int[10];
         int[] vetorSoma = new int[10];
 
         System.out.println("Digite 10 números inteiros para o primeiro vetor:");
         for (int i = 0; i < 10; i++) {
-            vetor1[i] = scanner.nextInt();
+            vetor1[i] = input.nextInt();
         }
 
         System.out.println("Digite 10 números inteiros para o segundo vetor:");
         for (int i = 0; i < 10; i++) {
-            vetor2[i] = scanner.nextInt();
+            vetor2[i] = input.nextInt();
         }
 
         for (int i = 0; i < 10; i++) {

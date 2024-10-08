@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class Vetor1 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         int[] numeros = new int[10];
         int somaPares = 0;
 
         System.out.println("Digite 10 números inteiros:");
-        for (int i = o; i < 10; i++) {
-            numeros[i] = scanner.nextInt();
+        for (int i = 0; i < 10; i++) {
+            numeros[i] = input.nextInt();
             if (numeros[i] % 2 == 0) {
                 somaPares += numeros[1];
             }

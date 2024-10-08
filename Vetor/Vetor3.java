@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class Vetor3 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         double[] numeros = new double[10];
         double menor, maior;
 
-        System.out.println("Digite 10 números reais");
+        System.out.println("Digite 10 números reais:");
         for (int i = 0; i < 10; i++) {
-            numeros[i] = scanner.nextDouble();
+            numeros[i] = input.nextInt();
         }
 
         menor = maior = numeros[0];
@@ -25,7 +25,7 @@ public class Vetor3 {
         for (double num : numeros) {
             System.out.print(num + " ");
         }
-        System.out.println("\nMenor números: " + menor);
+        System.out.println("\nMenor número: " + menor);
         System.out.println("Maior número: " + maior);
     }
 }
