@@ -1,9 +1,0 @@
-import java.util.Scanner;
-public class FuncaoPersonalizada {
-    public static main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Informe um valor para a função: ");
-        int valor = sc.nextInt();
-        System.out.println("Resultado da função: " + (valor * valor - 3 * valor + 2)); 
-    }
-}
