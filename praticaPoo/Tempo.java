@@ -1,25 +1,26 @@
-public class Time {
+package tempo;
+public class Tempo {
     private int hour;
     private int minute;
     private int second;
 
-    public Time() {
+    public Tempo() {
         this(0, 0, 0);
     }
 
-    public Time(int hour) {
+    public Tempo(int hour) {
         this(hour, 0, 0);
     }
 
-    public Time(int hour, int minute) {
+    public Tempo(int hour, int minute) {
         this(hour, minute, 0);
     }
 
-    public Time(int hour, int minute, int second) {
-        setTime(hour, minute, second);
+    public Tempo(int hour, int minute, int second) {
+        setTempo(hour, minute, second);
     }
 
-    public void setTime(int hour, int minute, int second) {
+    public void setTempo(int hour, int minute, int second) {
         setHour(hour);
         setMinute(minute);
         setSecond(second);
@@ -62,21 +63,21 @@ public class Time {
     }
 
     public String toString() {
-        return String.format("%02d:%02d:%02d", hour, minute, second);
+        return String.format("%d:%d:%d", hour, minute, second);
     }
 
     public static void main(String[] args) {
 
-        Time time1 = new Time(5, 15, 30);
-        System.out.println("Hora definida: " + time1); 
+        Tempo tempo1 = new Tempo();
+        System.out.println("Hora padrão: " + tempo1); 
 
-        Time time2 = new Time(13, 45, 0);
-        System.out.println("Hora definida: " + time2); 
+        Tempo tempo2 = new Tempo(10);
+        System.out.println("Hora definida: " + tempo2); 
 
-        Time time3 = new Time(23, 59, 59);
-        System.out.println("Hora definida: " + time3); 
+        Tempo tempo3 = new Tempo(10, 30);
+        System.out.println("Hora definida: " + tempo3); 
 
-        Time time4 = new Time(0, 0, 0);
-        System.out.println("Hora padrão: " + time4); 
+        Tempo tempo4 = new Tempo(10, 30, 45);
+        System.out.println("Hora definida: " + tempo4); 
     }
 }
