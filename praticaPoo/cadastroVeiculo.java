@@ -1,11 +1,21 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/** Classe Veiculo que representa as propriedades de um veículo. */
+/**
+ * Classe que representa um veículo com atributos básicos como marca, modelo, chassi, placa e cor.
+ */
 class Veiculo {
     private String marca, modelo, numeroChassi, placa, cor;
 
-    /** Construtor da classe Veiculo. */
+    /**
+     * Construtor da classe Veiculo.
+     *
+     * @param marca        Marca do veículo.
+     * @param modelo       Modelo do veículo.
+     * @param numeroChassi Número do chassi do veículo.
+     * @param placa        Placa do veículo.
+     * @param cor          Cor do veículo.
+     */
     public Veiculo(String marca, String modelo, String numeroChassi, String placa, String cor) {
         this.marca = marca;
         this.modelo = modelo;
@@ -14,19 +24,28 @@ class Veiculo {
         this.cor = cor;
     }
 
-    /** Exibe as informações do veículo em formato de string. */
+    /**
+     * Retorna uma representação em formato de string dos dados do veículo.
+     *
+     * @return String com os atributos do veículo formatados.
+     */
     @Override
     public String toString() {
-        return String.format("Veiculo  {marca='%s', modelo='%s', chassi='%s', placa='%s', cor='%s'}", marca, modelo, numeroChassi, placa, cor);
+        return String.format("Veiculo {marca='%s', modelo='%s', chassi='%s', placa='%s', cor='%s'}", 
+                marca, modelo, numeroChassi, placa, cor);
     }
 }
 
-/** Classe Cadastro para gerenciar o cadastro de veículos. */
+/**
+ * Classe que gerencia o cadastro de veículos, permitindo adicionar e exibir os registros.
+ */
 class Cadastro {
     private ArrayList<Veiculo> listaVeiculos = new ArrayList<>();
     private Scanner scanner = new Scanner(System.in);
 
-    /** Método para adicionar um novo veículo ao cadastro. */
+    /**
+     * Realiza o cadastro de um novo veículo solicitando as informações ao usuário.
+     */
     public void cadastrarVeiculo() {
         System.out.print("Marca: ");
         String marca = scanner.nextLine();
@@ -42,26 +61,39 @@ class Cadastro {
         System.out.println("Veículo cadastrado com sucesso!\n");
     }
 
-    /** Imprime todos os veículos cadastrados. */
+    /**
+     * Exibe a lista de veículos cadastrados no formato definido pelo método toString().
+     */
     public void imprimirCadastro() {
         listaVeiculos.forEach(System.out::println);
     }
 }
 
-/** Classe principal para executar o cadastro de veículos. */
+/**
+ * Classe principal que inicializa o programa de cadastro de veículos.
+ */
 public class cadastroVeiculo {
+    /**
+     * Método principal que gerencia o menu de interação com o usuário para o cadastro de veículos.
+     *
+     * @param args Argumentos de linha de comando (não utilizado neste programa).
+     */
     public static void main(String[] args) {
         Cadastro cadastro = new Cadastro();
         Scanner scanner = new Scanner(System.in);
         int opcao;
-        
+
         do {
             System.out.print("\n1. Cadastrar Veículo\n2. Imprimir Cadastro\n3. Sair\nEscolha: ");
-            opcao = scanner.nextInt(); scanner.nextLine();
-            if (opcao == 1) cadastro.cadastrarVeiculo();
-            else if (opcao == 2) cadastro.imprimirCadastro();
+            opcao = scanner.nextInt();
+            scanner.nextLine(); // Consumir a quebra de linha
+            if (opcao == 1) {
+                cadastro.cadastrarVeiculo();
+            } else if (opcao == 2) {
+                cadastro.imprimirCadastro();
+            }
         } while (opcao != 3);
-        
+
         scanner.close();
     }
 }
