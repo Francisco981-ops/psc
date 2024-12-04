@@ -9,12 +9,11 @@ class Veiculo {
 
     /**
      * Construtor da classe Veiculo.
-     *
-     * @param marca        Marca do veículo.
-     * @param modelo       Modelo do veículo.
-     * @param numeroChassi Número do chassi do veículo.
-     * @param placa        Placa do veículo.
-     * @param cor          Cor do veículo.
+     * Marca do veículo.
+     * Modelo do veículo.
+     * Número do chassi do veículo.
+     * Placa do veículo.
+     * Cor do veículo.
      */
     public Veiculo(String marca, String modelo, String numeroChassi, String placa, String cor) {
         this.marca = marca;
@@ -26,10 +25,8 @@ class Veiculo {
 
     /**
      * Retorna uma representação em formato de string dos dados do veículo.
-     *
-     * @return String com os atributos do veículo formatados.
+     *  String com os atributos do veículo formatados.
      */
-    @Override
     public String toString() {
         return String.format("Veiculo {marca='%s', modelo='%s', chassi='%s', placa='%s', cor='%s'}", 
                 marca, modelo, numeroChassi, placa, cor);
@@ -75,8 +72,7 @@ class Cadastro {
 public class cadastroVeiculo {
     /**
      * Método principal que gerencia o menu de interação com o usuário para o cadastro de veículos.
-     *
-     * @param args Argumentos de linha de comando (não utilizado neste programa).
+     * Argumentos de linha de comando (não utilizado neste programa).
      */
     public static void main(String[] args) {
         Cadastro cadastro = new Cadastro();

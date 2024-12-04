@@ -9,8 +9,7 @@ class Pessoa {
 
     /**
      * Construtor da classe Pessoa.
-     *
-     * @param nome Nome da pessoa.
+     * Nome da pessoa.
      */
     public Pessoa(String nome) {
         this.nome = nome;
@@ -18,8 +17,7 @@ class Pessoa {
 
     /**
      * Obtém o nome da pessoa.
-     *
-     * @return Nome da pessoa.
+     * Nome da pessoa.
      */
     public String getNome() {
         return nome;
@@ -41,9 +39,8 @@ class PessoaFisica extends Pessoa {
 
     /**
      * Construtor da classe PessoaFisica.
-     *
-     * @param nome Nome da pessoa física.
-     * @param cpf  CPF da pessoa física.
+     *  nome Nome da pessoa física.
+     *  cpf  CPF da pessoa física.
      */
     public PessoaFisica(String nome, String cpf) {
         super(nome);
@@ -54,7 +51,6 @@ class PessoaFisica extends Pessoa {
      * Exibe os dados da pessoa física no formato
      * "Pessoa Física: Nome='nome', CPF='cpf'".
      */
-    @Override
     public void exibe() {
         System.out.println("Pessoa Física: Nome='" + getNome() + "', CPF='" + cpf + "'");
     }
@@ -68,9 +64,8 @@ class PessoaJuridica extends Pessoa {
 
     /**
      * Construtor da classe PessoaJuridica.
-     *
-     * @param nome Nome da pessoa jurídica.
-     * @param cnpj CNPJ da pessoa jurídica.
+     * nome Nome da pessoa jurídica.
+     * cnpj CNPJ da pessoa jurídica.
      */
     public PessoaJuridica(String nome, String cnpj) {
         super(nome);
@@ -81,7 +76,6 @@ class PessoaJuridica extends Pessoa {
      * Exibe os dados da pessoa jurídica no formato
      * "Pessoa Jurídica: Nome='nome', CNPJ='cnpj'".
      */
-    @Override
     public void exibe() {
         System.out.println("Pessoa Jurídica: Nome='" + getNome() + "', CNPJ='" + cnpj + "'");
     }
@@ -97,9 +91,7 @@ class Cadastro {
 
     /**
      * Realiza o cadastro de uma pessoa.
-     *
-     * @param tipo Tipo de pessoa a ser cadastrada (1 para Pessoa, 2 para Pessoa Física,
-     *             3 para Pessoa Jurídica).
+     * Tipo de pessoa a ser cadastrada (1 para Pessoa, 2 para Pessoa Física,3 para Pessoa Jurídica).
      */
     public void cadastrarPessoa(int tipo) {
         System.out.print("Nome: ");
